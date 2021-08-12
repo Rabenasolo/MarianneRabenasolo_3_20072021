@@ -1,0 +1,20 @@
+{
+  "name": "mariannerabenasolo_3_20072021",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "sass" : "sass --watch ./assets/main.scss:./assets/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rabenasolo/MarianneRabenasolo_3_20072021.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Rabenasolo/MarianneRabenasolo_3_20072021/issues"
+  },
+  "homepage": "https://github.com/Rabenasolo/MarianneRabenasolo_3_20072021#readme",
+  "description": ""
+}
