@@ -1,84 +1,127 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./assets/style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
-      rel="stylesheet"
-    />
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
-    
-<script
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap"
+          rel="stylesheet"
+        />
+    <script
       src="https://kit.fontawesome.com/925fa0416f.js"
       crossorigin="anonymous"
-    ></script><title>Ohmyfood</title>
-</head>
-<body>
-    <header>
-        <div class="logo_ohmyfood">
-          <img
-            class="logo"
-            src="assets/images/logo/ohmyfood.png"
-            alt=" Ohmyfood"
-          />
-        </div>
-    </header>
-    <div class="image_restaurants">
-      <a href="#">
+    ></script>
+    <title>Ohmyfood</title>
+  </head>
+  <body>
+    <header class="top">
+      <div id="toback"><i class="fas fa-arrow-left"></i></div>
+      <div class="logo_ohmyfood">
         <img
-          src="assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
-          alt="Le délice des sens"
+          class="logo"
+          src="assets/images/logo/ohmyfood.png"
+          alt=" Ohmyfood"
         />
-      </a>
+      </div>
+    </header>
+    <div class="list1">
+      <div class="image_restaurants-menu">
+        <a href="#">
+          <img
+              src="assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
+              alt="Le délice des sens"
+            />
+        </a>
+      </div>
+      <div class="menu_restaurants">
+        <h1>Le délice des sens</h1>
+        <div class="heart-color">
+          <a href="heart"><i class="far fa-heart"></i></a>
+        </div>
+      </div>
+
+      <div class="entrees">
+        <h2>Entrées</h2>
+        <ul>
+          <li>
+            Tartare de thon<br />
+            Assaisonné au yuzu 25€
+          </li>
+          <li>
+            Bouchée de homard croustillant <br />
+            Et sa farandole de petits légumes 35€
+          </li>
+          <li>
+            Velouté de cèpes <br />
+            Aux truffes 20€
+          </li>
+        </ul>
+      </div>
+
+      <div class="plats">
+        <h2>Plats</h2>
+        <ul>
+          <li>
+            Poulet rôti aux herbes de Provence <br />
+            Et sa crème de truffe 40€
+          </li>
+          <li>
+            Langouste rôtie <br />
+            Et ses légumes de saison 35€
+          </li>
+          <li>
+            Côte de boeuf Angus <br />
+            Et sa purée de panais 44€
+          </li>
+        </ul>
+      </div>
+
+      <div class="desserts">
+        <h2>Désserts</h2>
+        <ul>
+          <li>
+            Farandole de desserts<br />
+            Du chef 18€
+          </li>
+          <li>
+            Crème brulée <br />
+            Revisitée 22€
+          </li>
+          <li>
+            Tiramisu <br />
+            À la noisette 23€
+          </li>
+        </ul>
+      </div>
     </div>
-    <div class="texte_restaurants">
-     Le délice des sens
 
-Entrées
-Tartare de thon
-Assaisonné au yuzu
-25€
-
-Bouchée de homard croustillant 
-Et sa farandole de petits légumes
-35€
-
-Velouté de cèpes 
-Aux truffes
-20€
-        
-Plats
-Poulet rôti aux herbes de Provence 
-Et sa crème de truffe
-40€
-
-Langouste rôtie 
-Et ses légumes de saison
-35€
-
-Côte de boeuf Angus 
-Et sa purée de panais
-44€
-
-Desserts
-Farandole de desserts
-Du chef
-18€
-
-Crème brulée 
-Revisitée
-22€
-
-Tiramisu 
-À la noisette
-23€
-
-</body>
+    <footer>
+      <div class="logoShrikhand">
+        <p>Ohmyfood</p>
+      </div>
+      <div class="list-footer">
+        <ul>
+          <li>
+            <a class="icon" href="#"><i class="fas fa-utensils"></i></a>
+            <a class="text" href="#">Proposer un restaurant</a>
+          </li>
+          <li>
+            <a class="icon" href="#"><i class="fas fa-hands-helping"></i></a>
+            <a class="text" href="#">Devenir partenaire</a>
+          </li>
+          <li><a class="text" href="#">Mention legal</a></li>
+          <li>
+            <a class="text" href="#">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+  </body>
 </html>

@@ -5,6 +5,7 @@ body {
   /*header*/
   /* navbar*/
   /*footer*/
+  /*menu1*/
 }
 body .header-title {
   font-size: 2rem;
@@ -229,6 +230,20 @@ body footer .list-footer ul li a {
 }
 body footer .list-footer ul li a .text {
   margin-left: 15px;
+}
+body .top {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+body .top #toback {
+  margin: 20px;
+}
+body .image_restaurants-menu img {
+  display: flex;
+  object-fit: cover;
+  width: 100%;
+  height: 250px;
 }
 
 /*# sourceMappingURL=style.css.map */

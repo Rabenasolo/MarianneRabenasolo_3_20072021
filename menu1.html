@@ -1,83 +1,137 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
-      rel="stylesheet"
-    />
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
-<script
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap"
+          rel="stylesheet"
+        />
+    <script
       src="https://kit.fontawesome.com/925fa0416f.js"
       crossorigin="anonymous"
-    ></script><title>Ohmyfood</title>
-</head>
-<body>
-    <header>
-        <div class="logo_ohmyfood">
-          <img
-            class="logo"
-            src="assets/images/logo/ohmyfood.png"
-            alt=" Ohmyfood"
-          />
-        </div>
+    ></script>
+    <title>Ohmyfood</title>
+  </head>
+  <body>
+    <header class="top">
+      <div id="toback"><i class="fas fa-arrow-left"></i></div>
+      <div class="logo_ohmyfood">
+        <img
+          class="logo"
+          src="assets/images/logo/ohmyfood.png"
+          alt=" Ohmyfood"
+        />
+      </div>
     </header>
-    <div class="list">
-      <div class="image_restaurants">
+    <div class="list1">
+      <div class="image_restaurants-menu">
         <a href="#">
           <img
-            src="assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
-            alt="A la française"
-          />
+              src="assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+              alt="La palette du goût"
+            />
         </a>
       </div>
-      <div class="texte_restaurants">
-    À la française
+      <div class="menu_restaurants">
+        <h1> La palette du goût</h1>
+        <div class="heart-color">
+          <a href="heart"><i class="far fa-heart"></i></a>
+        </div>
+      </div>
 
-Entrées
-Tartare de poulpe acidulé
-Aux zestes d'orange
-25€
+     
+      <div class="entrees">
+        <h2>Entrées</h2>
+        <ul>
+          <li>
+            Fricassée d'escargot <br/>
+            Au piment d'Espelette  25€
+          </li>
+          <li>
+            Foie gras de canard mi-cuit <br/>
+            Et ses copeaux de truffe noire 35€
+          </li>
+          <li>
+            Oeuf au plat <br/>
+            Assaisonné à la truffe sur lit de caviar 20€
+          </li>
+          
+        </ul>
+      </div>
 
-Velouté de légumes d'antan
-Carotte, panais, topinambour
-35€
+      <div class="plats">
+        <h2>Plats</h2>
+        <ul>
+          <li>
+            Filet de boeuf aux herbes <br/>
+            Accompagné de sa ribambelle de légumes 40€
+           
+          </li>
+          <li>
+            Parmentier de queue de boeuf <br/>
+            À la truffe noire sur sa purée de panais 35€
+          </li>
+          <li>
+            Filet de turbot <br/>
+            Aux agrumes 44€
+          </li>
+        </ul>
+      </div>
 
-Soupe à l'oignon
-Revisitée
-20€
+      <div class="desserts">
+        <h2>Désserts</h2>
+        <ul>
+          <li>
+            Paris-Brest <br/>
+            Revisité 18€
+           
+          </li>
+          <li>
+            Macaron au chocolat d'exception <br/>
+            Et glace à la vanille de Madagascar
+            22€
+          </li>
+          <li>
+            Mousse au chocolat <br/>
+            Au piment d'Espelette et à la truffe noire 23€ 
+          </li>
+        </ul>
+      </div>
+    
+     
+    </div>
 
-Plats
-Coquilles Saint-Jacques
-Accompagnées d'une purée de panais
-40€
-
-Magret de canard
-Et parmentier de pommes de terre
-35€
-
-Pigeonneau d’Ille-et-Vilaine
-Sur son lit de gnocchis aux légumes
-44€
-
-Desserts
-Pétales de violettes glacés
-Et purée de noisettes
-18€
-
-Fondant au chocolat
-Revisité
-22€
-
-Millefeuille croustillant
-Myrtilles et pâte d’amande
-23€
-</body>
+    <footer>
+      <div class="logoShrikhand">
+        <p>Ohmyfood</p>
+      </div>
+      <div class="list-footer">
+        <ul>
+          <li>
+            <a class="icon" href="#"><i class="fas fa-utensils"></i></a>
+            <a class="text" href="#">Proposer un restaurant</a>
+          </li>
+          <li>
+            <a class="icon" href="#"><i class="fas fa-hands-helping"></i></a>
+            <a class="text" href="#">Devenir partenaire</a>
+          </li>
+          <li><a class="text" href="#">Mention legal</a>
+        </li>
+          <li>
+            <a class="text" href="#">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+  </body>
 </html>
+
+        

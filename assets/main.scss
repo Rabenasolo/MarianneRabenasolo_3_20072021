@@ -1,6 +1,7 @@
 $couleur-primaire: #9356dc;
 $couleur-secondaire: #ff79da;
 $couleur-tertiaire: #99e2d0;
+
 @mixin for-phone-only {
   @media (max-width: 599px) { @content; }
 }
@@ -276,5 +277,25 @@ body {
     
     
   }
-  
+  /*menu1*/
+  .top{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    #toback{
+      margin: 20px;
+    }
+  }
+  .image_restaurants-menu{
+
+      img {
+        display: flex;
+        object-fit: cover;
+        width: 100%;
+        height: 250px;
+      }
+  }
 }
+
+  
+
