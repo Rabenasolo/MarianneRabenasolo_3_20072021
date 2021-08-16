@@ -24,14 +24,6 @@ body {
   box-sizing: border-box;
   font-family: "roboto", sans-serif;
 
-  .header-title {
-    font-size: 2rem;
-
-    @include for-phone-only {
-      font-size: 1rem;
-    }
-  }
-
   /*header*/
   .logo {
     display: block;
@@ -44,23 +36,31 @@ body {
     display: block;
     text-align: center;
     margin: 0;
-    padding: 0 0 15px 0;
-    box-shadow: 3px 3px 10px rgb(0 0 0 / 19%);
+    padding: 0 0 35px 0;
 
     p {
-      font-weight: normal;
+      font-weight: lighter;
+      margin: 20px;
     }
 
     .searchbar {
-      padding: 10px;
-      background-color: #dedee4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0 0 0 120px;
+      background-color: #e6e6f0;
+      box-shadow: -2px -2px 0 2px #d8d8da;
+      i {
+        font-size: larger;
+      }
 
       .searchtext {
-        background-color: #dedee4;
+        background-color: #e6e6f0;
         border: none;
         margin: 10px;
         font-weight: bold;
         color: black;
+        font-size: larger;
       }
     }
   }
@@ -79,10 +79,11 @@ body {
 
   .explorer {
     background: linear-gradient(#ff79da, #9356dc);
-    border-radius: 20px;
-    padding: 10px;
+    border-radius: 25px;
+    padding: 15px;
     color: white;
     border: 0;
+    font-size: large;
   }
 
   /* navbar*/
@@ -100,9 +101,12 @@ body {
     .menu {
       display: flex;
       flex-direction: row;
+      justify-content: center;
       padding: 13px;
       margin: 0;
-
+      @include for-phone-only {
+        justify-content: initial;
+      }
       .logo_chiffre {
         display: flex;
         justify-content: center;
@@ -119,6 +123,8 @@ body {
           align-items: center;
           color: white;
           text-align: center;
+          font-size: smaller;
+          font-weight: lighter;
         }
       }
 
@@ -138,44 +144,71 @@ body {
           color: black;
           text-align: center;
         }
+        .fa-store {
+          color: $couleur-primaire;
+        }
       }
     }
   }
   .list-restaurants {
-    display: flex;
-    flex-direction: column;
     background-color: #f1f1f3;
-    row-gap: 15px;
+    h1 {
+      margin: 50px 0 10px 10px;
+    }
     .list {
-      height: 350px;
+      @include for-phone-only {
+        display: flex;
+        flex-direction: column;
+        row-gap: 15px;
+        margin: 10px 20px 10px 20px;
+      }
+
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 20px;
+      grid-auto-rows: minmax(100px, auto);
+      height: 285px;
       background-color: white;
-      margin: 20px;
+      margin: 10px 20px 20px 20px;
       border-radius: 15px;
+
       .image_restaurants0 {
         .nouveau0 {
           position: relative;
         }
         img {
           display: flex;
-          border-top-left-radius: 15px;
-          border-top-right-radius: 15px;
+          border-radius: 15px;
           object-fit: cover;
           width: 100%;
-          height: 250px;
+          @include for-phone-only {
+            height: 200px;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+          }
+
+          height: 285px;
         }
         #nouveau0 {
           position: absolute;
           width: 70px;
           height: auto;
           text-align: center;
-          margin-left: 270px;
-          margin-top: -230px;
+          @include for-phone-only {
+            margin-left: 270px;
+            margin-top: -180px;
+          }
+          margin-left: 791px;
+          margin-top: -155px;
           font-size: small;
           font-weight: bold;
           background: #99e2d0;
-          color: #165344;
           box-shadow: 3px 3px 10px rgb(0 0 0 / 50%);
           border-radius: 2px;
+          p {
+            color: #165344;
+            margin: 5px 0;
+          }
         }
       }
       .image_restaurants {
@@ -185,11 +218,19 @@ body {
 
         img {
           display: flex;
-          border-top-left-radius: 15px;
-          border-top-right-radius: 15px;
+          border-radius: 15px;
           object-fit: cover;
-          width: 375px;
-          height: 100%;
+          width: 475px;
+          height: 285px;
+          @include for-phone-only {
+            width: 375px;
+            height: 200px;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+          }
+          @include for-tablet-up{
+            width: 372px;
+          }
         }
       }
 
@@ -199,25 +240,37 @@ body {
         }
         img {
           display: flex;
-          border-top-left-radius: 15px;
-          border-top-right-radius: 15px;
+          border-radius: 15px;
           object-fit: cover;
           width: 100%;
-          height: 250px;
+          height: 285px;
+          @include for-phone-only {
+            height: 200px;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+          }
         }
         #nouveau1 {
           position: absolute;
           width: 70px;
           height: auto;
           text-align: center;
-          margin-left: 270px;
-          margin-top: -230px;
+          @include for-phone-only {
+            margin-left: 270px;
+            margin-top: -180px;
+          }
+          margin-left: 791px;
+          margin-top: -155px;
           font-size: small;
           font-weight: bold;
           background: #99e2d0;
-          color: #165344;
+
           box-shadow: 3px 3px 10px rgb(0 0 0 / 50%);
           border-radius: 2px;
+          p {
+            color: #165344;
+            margin: 5px 0;
+          }
         }
       }
       .texte_restaurants {
@@ -247,28 +300,36 @@ body {
   /*footer*/
 
   footer {
-    background-color: rgb(83, 82, 82);
+    background-color: rgb(53, 53, 53);
     display: flex;
     flex-direction: column;
     .logoShrikhand {
       p {
         font-family: "Shrikhand", cursive;
-        margin: 10px 0 5px 15px;
+        margin: 10px 0 5px 25px;
+        color: white;
       }
     }
     .list-footer {
+      height: 130px;
       ul {
         margin-top: 0;
         padding-left: 15px;
         li {
           list-style-type: none;
-          margin-top: 5px;
+          margin: 10px;
+          .text1 {
+            margin-left: 15px;
+          }
           a {
             text-decoration: none;
             color: white;
-            .text {
-              margin-left: 15px;
-            }
+          }
+          .text2 {
+            margin-left: 7.5px;
+          }
+          .text3 {
+            margin-bottom: 10px;
           }
         }
       }
@@ -352,8 +413,11 @@ body {
           font-size: larger;
         }
         p {
-          margin: 10px 0 0 0;
+          margin: 10px 10px 0 0;
           font-weight: lighter;
+        }
+        .tarif {
+          font-weight: bold;
         }
       }
     }
