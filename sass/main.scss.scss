@@ -109,6 +109,7 @@ body {
   margin: 0%;
   padding: 0%;
   scroll-behavior: smooth;
+ 
 
   /*header*/
   .logo {
@@ -274,8 +275,8 @@ body {
   }
   .restaurants {
     margin: 10px 0 30px 0;
-    background-color: #dcdce0;
-    padding: 25px;
+    background-color: #ebebf7;
+    padding: 35px;
 
     h2 {
       margin: -15px 0 25px 10px;
@@ -303,78 +304,23 @@ body {
         a {
           text-decoration: none;
           color: black;
-        }
-        .image_restaurants1 {
-          img {
-            display: flex;
-            object-fit: cover;
-            width: 100%;
-            height: 200px;
-            border-radius: 20px 20px 0px 0px;
-          }
-          .nouveau1 {
-            position: relative;
-          }
-          #nouveau1 {
-            position: absolute;
-            width: 70px;
-            height: auto;
-            text-align: center;
-            margin-left: 220px;
-            margin-top: -170px;
-            font-size: small;
-            font-weight: bold;
-            background: #99e2d0;
-            box-shadow: 3px 3px 10px rgb(0 0 0 / 50%);
-            border-radius: 2px;
-
-            @include for-phone-only {
-              margin-left: 270px;
-              margin-top: -180px;
-            }
-            p {
-              color: #165344;
-              margin: 5px 0;
-            }
-          }
-        }
-
-        .image_restaurants2 {
-          img {
-            display: flex;
-            object-fit: cover;
-            width: 100%;
-            height: 200px;
-            border-radius: 20px 20px 0px 0px;
-          }
-          .nouveau2 {
-            position: relative;
-          }
-          #nouveau2 {
-            position: absolute;
-            width: 70px;
-            height: auto;
-            text-align: center;
-            margin-left: 220px;
-            margin-top: -170px;
-            font-size: small;
-            font-weight: bold;
-            background: #99e2d0;
-            box-shadow: 3px 3px 10px rgb(0 0 0 / 50%);
-            border-radius: 2px;
-
-            @include for-phone-only {
-              margin-left: 270px;
-              margin-top: -180px;
-            }
-            p {
-              color: #165344;
-              margin: 5px 0;
-            }
-          }
-        }
-
+        }      
         .image_restaurants {
+          .nouveau {
+            position: absolute;
+            width: 70px;
+            height: auto;
+            text-align: center;
+            right: 70px;
+            font-size: small;
+            font-weight: bold;
+            background: #99e2d0;
+            box-shadow: 3px 3px 10px rgb(0 0 0 / 50%);
+            border-radius: 2px;
+
+            @include for-phone-only {
+        
+            }
           img {
             display: flex;
             object-fit: cover;
@@ -432,13 +378,16 @@ body {
       }
     }
   }
+  }
 
   /*footer*/
 
   footer {
+    position: relative;
     background-color: rgb(53, 53, 53);
     display: flex;
     flex-direction: column;
+    margin-top: -30px;
     .logoShrikhand {
       p {
         font-family: "Shrikhand", cursive;
@@ -475,7 +424,7 @@ body {
   /*menu1/2/3/4*/
   .top {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     #toback {
       margin: 20px;
@@ -486,44 +435,71 @@ body {
   }
 
   .carte_menu {
-    display: flex;
-    flex-direction: column;
+  
     background-color: #f1f1f3;
 
     .image_restaurants_menu {
-      position: absolute;
-   
+      position: relative;
+      border-bottom-left-radius: -20px;
+        border-bottom-right-radius: -20px;
       img {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
+       
         object-fit: cover;
         width: 100%;
         height: auto;
-        border-bottom-left-radius: -20px;
-        border-bottom-right-radius: -20px;
+        
       }
     }
+ .commander {
+        text-align: center;
+        margin: 20px;
+     
+        > a:hover {
+          opacity: 0.7;
+        }
+        a {
+          text-decoration: none;
+          color: white;
+          border-radius: 30px;
+          border: none;
+          font-size: 17px;
+          font-weight: 500;
+          margin: 20px;
+          padding: 10px;
+          background: $linear;
+          cursor: grab;
 
+          /* Animation-start*/
+          animation: bouton 1.2s infinite;
+          /* Animation-end*/
+        }
+        @keyframes commander {
+          from {
+            box-shadow: 0 0 0 10px rgba(185, 2, 241, 0.158);
+          }
+        }
+      }
+    }
     .title-menu {
       position: relative;
       background-color: #f1f1f3;
       font-weight: bold;
       border-top-left-radius: 50px;
       border-top-right-radius: 50px;
-      margin: 200px 0 50px 0;
+   margin-top: -100px;
 
       @include for-phone-only {
+        margin-top: -30px;
       }
       .title_menu_restaurants {
         display: flex;
-        justify-content: space-around;
+        justify-content: center;
         align-items: center;
         h1 {
           font-family: "Shrikhand", cursive;
         }
         .heart{
-          
+          margin-left: 20px;
            > .fas {
             display: none;
             content: "";
@@ -620,33 +596,6 @@ body {
           }
         }
       }
-      .commander {
-        text-align: center;
-        > a:hover {
-          opacity: 0.7;
-        }
-        a {
-          text-decoration: none;
-          color: white;
-          border-radius: 30px;
-          border: none;
-          font-size: 17px;
-          font-weight: 500;
-          margin: 20px;
-          padding: 10px;
-          background: $linear;
-          cursor: grab;
-
-          /* Animation-start*/
-          animation: bouton 1.2s infinite;
-          /* Animation-end*/
-        }
-        @keyframes commander {
-          from {
-            box-shadow: 0 0 0 10px rgba(185, 2, 241, 0.158);
-          }
-        }
-      }
-    }
+     
   }
 }
