@@ -21,6 +21,89 @@ body {
   padding: 0%;
   scroll-behavior: smooth;
 
+  /*loading spinner*/
+  .lds-spinner {
+    color: official;
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 50px;
+    left: 50%;
+    top: auto;
+    margin-left: -3.5em;
+  }
+  .lds-spinner div {
+    transform-origin: 40px 40px;
+    animation: lds-spinner 1.2s linear infinite;
+  }
+  .lds-spinner div:after {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 150px;
+    left: 37px;
+    width: 20px;
+    height: 50px;
+    border-radius: 20%;
+    background: linear-gradient(#ff79da, #9356dc);
+  }
+  .lds-spinner div:nth-child(1) {
+    transform: rotate(0deg);
+    animation-delay: -1.1s;
+  }
+  .lds-spinner div:nth-child(2) {
+    transform: rotate(30deg);
+    animation-delay: -1s;
+  }
+  .lds-spinner div:nth-child(3) {
+    transform: rotate(60deg);
+    animation-delay: -0.9s;
+  }
+  .lds-spinner div:nth-child(4) {
+    transform: rotate(90deg);
+    animation-delay: -0.8s;
+  }
+  .lds-spinner div:nth-child(5) {
+    transform: rotate(120deg);
+    animation-delay: -0.7s;
+  }
+  .lds-spinner div:nth-child(6) {
+    transform: rotate(150deg);
+    animation-delay: -0.6s;
+  }
+  .lds-spinner div:nth-child(7) {
+    transform: rotate(180deg);
+    animation-delay: -0.5s;
+  }
+  .lds-spinner div:nth-child(8) {
+    transform: rotate(210deg);
+    animation-delay: -0.4s;
+  }
+  .lds-spinner div:nth-child(9) {
+    transform: rotate(240deg);
+    animation-delay: -0.3s;
+  }
+  .lds-spinner div:nth-child(10) {
+    transform: rotate(270deg);
+    animation-delay: -0.2s;
+  }
+  .lds-spinner div:nth-child(11) {
+    transform: rotate(300deg);
+    animation-delay: -0.1s;
+  }
+  .lds-spinner div:nth-child(12) {
+    transform: rotate(330deg);
+    animation-delay: 0s;
+  }
+  @keyframes lds-spinner {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
   /*LOGO*/
   .header__logo {
     display: block;
@@ -79,15 +162,6 @@ body {
         padding: 20px;
         background: $linear;
         cursor: grab;
-
-        /* Animation-start*/
-        animation: bouton 1.2s infinite;
-        /* Animation-end*/
-      }
-    }
-    @keyframes explore__button--link {
-      from {
-        box-shadow: 0 0 0 10px rgba(185, 2, 241, 0.158);
       }
     }
   }
@@ -197,11 +271,12 @@ body {
         background-color: white;
         border-radius: 20px;
         position: relative;
+
         .item__link {
           text-decoration: none;
-          color: black;
           background-color: white;
           border-radius: 20px;
+
           .item__new-green {
             position: absolute;
             text-align: center;
@@ -230,48 +305,41 @@ body {
             align-items: center;
             margin: 10px;
 
-            h3 {
-              margin: 0 0 2px 0;
-              font-weight: bold;
-            }
-            p {
-              margin: 3px 0 10px 5px;
-            }
-
             .item__info-container--title {
               margin: 5px 0 2px 5px;
               font-weight: bold;
+              color: black;
+
+              h3 {
+                margin: 0 0 2px 0;
+                font-weight: bold;
+              }
+              p {
+                margin: 3px 0 10px 5px;
+              }
             }
-            .item__info-container--location {
-              margin: 3px 0 10px 5px;
-            }
+
             .heart-icons__container {
               margin-right: 20px;
               font-size: x-large;
-
-              > .heart-icon icon-full fas {
-                display: none;
-                font-size: 26.6px;
-                margin: 7px;
-                background-image: $linear;
-                color: transparent;
-              }
-              > .heart-icon icon-empty far {
-                font-size: 28px;
-                color: $linear;
-                margin: 7px;
-              }
-            }
-
-            .heart-icon:hover {
               > .far {
-                display: none;
+                display: block;
+                color: black;
               }
               > .fas {
-                display: block;
-                content: "";
-                position: relative;
-                animation: coeur 800ms ease-in-out forwards;
+                display: none;
+                color: linear-gradient(to top, #ff79da, #9356dc);
+              }
+
+              &:hover {
+                cursor: pointer;
+                > .far {
+                  display: none;
+                }
+                > .fas {
+                  display: block;
+                  position: relative;
+                }
               }
             }
           }
@@ -325,10 +393,9 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    .header-menu__icon--link{
+    .header-menu__icon--link {
       position: absolute;
       left: 20px;
-    
     }
   }
 
@@ -337,12 +404,11 @@ footer {
 
     .image_restaurants_menu {
       position: relative;
-      border-bottom-left-radius: -20px;
-      border-bottom-right-radius: -20px;
+
       img {
         object-fit: cover;
         width: 100%;
-        height: auto;
+        max-height: 250px;
       }
     }
 
@@ -366,31 +432,26 @@ footer {
         h1 {
           font-family: "Shrikhand", cursive;
         }
-        .heart {
-          margin-left: 20px;
+        .heart-icons__container {
+          display: flex;
+          padding-left: 10px;
+          font-size: x-large;
+          > .far {
+            display: block;
+          }
           > .fas {
             display: none;
-            content: "";
-            font-size: 26.6px;
+            color: linear-gradient(to top, #ff79da, #9356dc);
+          }
 
-            background-image: $linear;
-            background-clip: content-box;
-            -webkit-background-clip: text;
-            color: transparent;
-          }
-          > .far {
-            font-size: 28px;
-            color: $linear;
-          }
           &:hover {
+            cursor: pointer;
             > .far {
               display: none;
             }
             > .fas {
               display: block;
-              content: "";
               position: relative;
-              animation: coeur 800ms ease-in-out forwards;
             }
           }
         }
@@ -404,22 +465,25 @@ footer {
           flex-direction: column;
         }
 
-        /*animations-start*/
-        .carte:nth-of-type(1) {
-          animation: carte 1.5s ease-in forwards;
-          animation-delay: 0s;
-        }
-        .carte:nth-of-type(2) {
-          animation: carte 1.5s ease-in forwards;
-          animation-delay: 0.5s;
-        }
-        .carte:nth-of-type(3) {
-          animation: carte 1.5s ease-in forwards;
-          animation-delay: 1s;
-        }
-        /* Animation-end*/
         .carte {
           margin: 20px 0;
+          animation: 2s linear 1s slidein;
+          @keyframes slidein {
+            0% {
+              transform: translateY(100%);
+              opacity: 0;
+            }
+
+            50% {
+              transform: translateY(50%);
+              opacity: 0.5;
+            }
+
+            100% {
+              transform: translateY(0%);
+              opacity: 1;
+            }
+          }
           h4 {
             font-weight: lighter;
             border-bottom: 4px solid #99e2d0;
@@ -432,33 +496,65 @@ footer {
             padding-left: 0;
 
             li {
+          
               display: flex;
-              flex-direction: column;
+              justify-content: space-between;
               box-shadow: 3px 3px 10px rgb(0 0 0 / 19%);
               border-radius: 20px;
               margin: 20px;
-              padding: 10px;
               background-color: white;
+              cursor: pointer;
+              line-height: 10px;
+              overflow: hidden;
 
-              span {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-              }
-              h5 {
-                margin: 0;
-
-                font-size: larger;
-              }
-              p {
-                margin: 10px 10px 0 0;
-                font-weight: lighter;
-                overflow: hidden;
-                text-overflow: ellipsis;
+              .carte--choix {
+            
                 white-space: nowrap;
+                overflow: hidden;
+                h5 {
+                  font-weight: bold;
+                  font-size: 1.1em;
+                  white-space: nowrap;
+                  overflow: hidden;
+                  text-overflow: ellipsis;
+                  padding: 5px 0 5px 10px;
+                  margin:10px 0 5px 0;
+                }
+                .type {
+                  font-weight: lighter;
+                  white-space: nowrap;
+                  overflow: hidden;
+                  text-overflow: ellipsis;
+                  padding: 5px 0 5px 10px;
+                  margin:10px 0 5px 0;
+                }
               }
-              .tarif {
-                font-weight: bold;
+
+              .carte--check {
+                display: flex;
+
+                .tarif {
+                  font-weight: bold;
+                  align-self: flex-end;
+                  margin: 10px;
+                }
+                .fas { 
+                  cursor: pointer;
+                  color: white;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  background-color: #99e2d0;
+                  height: 100%;
+                  font-size: 1.3em;
+                  border-radius: 0 20px 20px 0;
+                  width: 0;
+                  transition-duration: 0.8s;
+                  overflow: hidden;
+                }
+                &:hover i {
+                  width: 80px;
+                }
               }
             }
           }
@@ -484,7 +580,7 @@ footer {
           cursor: grab;
 
           /* Animation-start*/
-          animation: bouton 1.2s infinite;
+
           /* Animation-end*/
         }
         @keyframes commander {
