@@ -329,6 +329,7 @@ body {
               > .fas {
                 display: none;
                 color: linear-gradient(to top, #ff79da, #9356dc);
+                opacity:0.5;
               }
 
               &:hover {
@@ -497,8 +498,7 @@ footer {
 
             li {
           
-              display: flex;
-              justify-content: space-between;
+          
               box-shadow: 3px 3px 10px rgb(0 0 0 / 19%);
               border-radius: 20px;
               margin: 20px;
@@ -506,12 +506,14 @@ footer {
               cursor: pointer;
               line-height: 10px;
               overflow: hidden;
+              padding: 10px;
+              &:hover {
+                .carte--check{
+                  display: block;
+                }
 
-              .carte--choix {
-            
-                white-space: nowrap;
-                overflow: hidden;
-                h5 {
+              } 
+ h5 {
                   font-weight: bold;
                   font-size: 1.1em;
                   white-space: nowrap;
@@ -520,41 +522,47 @@ footer {
                   padding: 5px 0 5px 10px;
                   margin:10px 0 5px 0;
                 }
+              .carte--choix {
+                display: flex;
+                white-space: nowrap;
+                overflow: hidden;
+               
                 .type {
                   font-weight: lighter;
                   white-space: nowrap;
                   overflow: hidden;
                   text-overflow: ellipsis;
                   padding: 5px 0 5px 10px;
-                  margin:10px 0 5px 0;
+                  margin: 0 0 5px 0;
+                }
+                .tarif {
+                  font-weight: bold;
+                  align-self: flex-end;
+                  margin: 0 10px 10px 10px
                 }
               }
 
               .carte--check {
-                display: flex;
-
-                .tarif {
-                  font-weight: bold;
-                  align-self: flex-end;
-                  margin: 10px;
-                }
-                .fas { 
+                display: none;
+                background-color: #99e2d0;
+                width: 0%;
+                position: relative;
+                border-top-right-radius: 15%;
+                border-bottom-right-radius: 15%;
+                .fas {      
                   cursor: pointer;
                   color: white;
-                  display: flex;
-                  justify-content: center;
-                  align-items: center;
                   background-color: #99e2d0;
                   height: 100%;
                   font-size: 1.3em;
                   border-radius: 0 20px 20px 0;
-                  width: 0;
+
                   transition-duration: 0.8s;
                   overflow: hidden;
                 }
-                &:hover i {
-                  width: 80px;
-                }
+
+
+              
               }
             }
           }

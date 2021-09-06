@@ -304,6 +304,7 @@ body .restaurant__container .restaurant__list .restaurant__item .item__link .ite
 body .restaurant__container .restaurant__list .restaurant__item .item__link .item__info-container .heart-icons__container > .fas {
   display: none;
   color: linear-gradient(to top, #ff79da, #9356dc);
+  opacity: 0.5;
 }
 body .restaurant__container .restaurant__list .restaurant__item .item__link .item__info-container .heart-icons__container:hover {
   cursor: pointer;
@@ -455,8 +456,6 @@ footer ul li a .icon {
   padding-left: 0;
 }
 .menu__body .carte_menu .title-menu .list_menu .carte ul li {
-  display: flex;
-  justify-content: space-between;
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.19);
   border-radius: 20px;
   margin: 20px;
@@ -464,12 +463,12 @@ footer ul li a .icon {
   cursor: pointer;
   line-height: 10px;
   overflow: hidden;
+  padding: 10px;
 }
-.menu__body .carte_menu .title-menu .list_menu .carte ul li .carte--choix {
-  white-space: nowrap;
-  overflow: hidden;
+.menu__body .carte_menu .title-menu .list_menu .carte ul li:hover .carte--check {
+  display: block;
 }
-.menu__body .carte_menu .title-menu .list_menu .carte ul li .carte--choix h5 {
+.menu__body .carte_menu .title-menu .list_menu .carte ul li h5 {
   font-weight: bold;
   font-size: 1.1em;
   white-space: nowrap;
@@ -478,38 +477,41 @@ footer ul li a .icon {
   padding: 5px 0 5px 10px;
   margin: 10px 0 5px 0;
 }
+.menu__body .carte_menu .title-menu .list_menu .carte ul li .carte--choix {
+  display: flex;
+  white-space: nowrap;
+  overflow: hidden;
+}
 .menu__body .carte_menu .title-menu .list_menu .carte ul li .carte--choix .type {
   font-weight: lighter;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   padding: 5px 0 5px 10px;
-  margin: 10px 0 5px 0;
+  margin: 0 0 5px 0;
 }
-.menu__body .carte_menu .title-menu .list_menu .carte ul li .carte--check {
-  display: flex;
-}
-.menu__body .carte_menu .title-menu .list_menu .carte ul li .carte--check .tarif {
+.menu__body .carte_menu .title-menu .list_menu .carte ul li .carte--choix .tarif {
   font-weight: bold;
   align-self: flex-end;
-  margin: 10px;
+  margin: 0 10px 10px 10px;
+}
+.menu__body .carte_menu .title-menu .list_menu .carte ul li .carte--check {
+  display: none;
+  background-color: #99e2d0;
+  width: 0%;
+  position: relative;
+  border-top-right-radius: 15%;
+  border-bottom-right-radius: 15%;
 }
 .menu__body .carte_menu .title-menu .list_menu .carte ul li .carte--check .fas {
   cursor: pointer;
   color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background-color: #99e2d0;
   height: 100%;
   font-size: 1.3em;
   border-radius: 0 20px 20px 0;
-  width: 0;
   transition-duration: 0.8s;
   overflow: hidden;
-}
-.menu__body .carte_menu .title-menu .list_menu .carte ul li .carte--check:hover i {
-  width: 80px;
 }
 .menu__body .carte_menu .title-menu .commander {
   text-align: center;
