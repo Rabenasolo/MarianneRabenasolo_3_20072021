@@ -91,22 +91,7 @@
           .carte {
             margin: 20px 0;
             animation: 1s linear 1s slidein;
-            @keyframes slidein {
-              0% {
-                transform: translateY(100%);
-                opacity: 0;
-              }
-  
-              50% {
-                transform: translateY(50%);
-                opacity: 0.5;
-              }
-  
-              100% {
-                transform: translateY(0%);
-                opacity: 1;
-              }
-            }
+      
             h4 {
               font-weight: lighter;
               border-bottom: 4px solid #99e2d0;
@@ -174,15 +159,7 @@
                   position: relative;
                   border-top-right-radius: 15%;
                   border-bottom-right-radius: 15%;
-                  @keyframes check {
-                    0% {
-                      right: -99px;
-                    }
-                    100% {
-                      right: -1px;
-                      width: 20%;
-                    }
-                  }
+           
                   .icon--check {
                     position: absolute;
                     top: 35%;
@@ -190,14 +167,7 @@
                     color: white;
                     font-size: 1.3em;
                     border-radius: 0 20px 20px 0;
-                    @keyframes rotate {
-                      0% {
-                        transform: rotate(0deg);
-                      }
-                      100% {
-                        transform: rotate(360deg);
-                      }
-                    }
+                
                   }
                 }
               }
@@ -223,15 +193,8 @@
             background: $linear;
             cursor: grab;
   
-            /* Animation-start*/
-  
-            /* Animation-end*/
           }
-          @keyframes commander {
-            from {
-              box-shadow: 0 0 0 10px rgba(185, 2, 241, 0.158);
-            }
-          }
+    
         }
       }
     }

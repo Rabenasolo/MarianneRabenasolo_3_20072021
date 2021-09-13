@@ -1,3 +1,4 @@
+/* animation loading spinner*/ 
 @keyframes spin {
   0% {
     visibility: visible;
@@ -15,6 +16,9 @@
     opacity: 0;
   }
 }
+
+/* animation apparition progressive des plats*/ 
+
 @keyframes slidein {
     0% {
       transform: translateY(100%);
@@ -31,6 +35,9 @@
       opacity: 1;
     }
   }
+
+  /* animation click choix menu en vert */
+
   @keyframes check {
     0% {
       right: -99px;
@@ -48,6 +55,9 @@
       transform: rotate(360deg);
     }
   }
+
+  /*modification couleur bouton commander*/
+
   @keyframes commander {
     from {
       box-shadow: 0 0 0 10px rgba(185, 2, 241, 0.158);
