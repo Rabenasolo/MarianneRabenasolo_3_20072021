@@ -1,4 +1,4 @@
-/* animation loading spinner*/ 
+/* animation loading spinner*/
 @keyframes spin {
   0% {
     visibility: visible;
@@ -17,49 +17,49 @@
   }
 }
 
-/* animation apparition progressive des plats*/ 
+/* animation apparition progressive des plats*/
 
 @keyframes slidein {
-    0% {
-      transform: translateY(100%);
-      opacity: 0;
-    }
-
-    50% {
-      transform: translateY(50%);
-      opacity: 0.5;
-    }
-
-    100% {
-      transform: translateY(0%);
-      opacity: 1;
-    }
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
   }
 
-  /* animation click choix menu en vert */
-
-  @keyframes check {
-    0% {
-      right: -99px;
-    }
-    100% {
-      right: -1px;
-      width: 20%;
-    }
-  }
-  @keyframes rotate {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
+  50% {
+    transform: translateY(50%);
+    opacity: 0.5;
   }
 
-  /*modification couleur bouton commander*/
-
-  @keyframes commander {
-    from {
-      box-shadow: 0 0 0 10px rgba(185, 2, 241, 0.158);
-    }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
   }
+}
+
+/* animation click choix menu en vert */
+
+@keyframes check {
+  0% {
+    right: -99px;
+  }
+  100% {
+    right: -1px;
+    width: 20%;
+  }
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/*modification couleur bouton commander*/
+
+@keyframes commander {
+  from {
+    box-shadow: 0 0 0 10px rgba(185, 2, 241, 0.158);
+  }
+}
