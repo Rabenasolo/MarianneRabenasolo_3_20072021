@@ -58,9 +58,7 @@
             }
             .icon-full {
               display: block;
-              opacity: 1;
               transform: scale(1);
-              transition: transform 3ms linear;
             }
           }
           .icon-empty {
@@ -71,9 +69,11 @@
             background: linear-gradient(to top, #ff79da, #9356dc);
             -webkit-background-clip: text;
             color: transparent;
-            transform-origin: bottom;
-          }
+            transform-origin:50% 0%;
+            transition: transform 3000ms;
+            transform:scale(0)
         }
+      }
       }
       .list_menu {
         display: grid;

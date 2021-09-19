@@ -126,9 +126,7 @@ a {
 }
 .menu__body .carte_menu .title-menu .title_menu_restaurants .heart-icons__container:hover .icon-full {
   display: block;
-  opacity: 1;
   transform: scale(1);
-  transition: transform 3ms linear;
 }
 .menu__body .carte_menu .title-menu .title_menu_restaurants .heart-icons__container .icon-empty {
   display: block;
@@ -138,7 +136,9 @@ a {
   background: linear-gradient(to top, #ff79da, #9356dc);
   -webkit-background-clip: text;
   color: transparent;
-  transform-origin: bottom;
+  transform-origin: 50% 0%;
+  transition: transform 3000ms;
+  transform: scale(0);
 }
 .menu__body .carte_menu .title-menu .list_menu {
   display: grid;
@@ -525,9 +525,7 @@ footer ul li a .icon {
 }
 .restaurant__container .restaurant__list .restaurant__item .item__link .item__info-container .heart-icons__container:hover .icon-full {
   display: block;
-  opacity: 1;
   transform: scale(1);
-  transition: transform 0.3s linear;
 }
 .restaurant__container .restaurant__list .restaurant__item .item__link .item__info-container .heart-icons__container .icon-empty {
   display: block;
@@ -537,7 +535,9 @@ footer ul li a .icon {
   background: linear-gradient(to top, #ff79da, #9356dc);
   -webkit-background-clip: text;
   color: transparent;
-  transform-origin: bottom;
+  transform-origin: 50% 0%;
+  transition: transform 3000ms;
+  transform: scale(0);
 }
 
 /*# sourceMappingURL=style.css.map */
