@@ -9,6 +9,7 @@
     align-items: center;
     .header-menu__icon--link {
       position: absolute;
+      color: black;
       left: 20px;
     }
   }
@@ -51,6 +52,7 @@
           display: flex;
           padding-left: 10px;
           font-size: x-large;
+          color: black;
           &:hover {
             cursor: pointer;
             .icon-empty {
@@ -58,7 +60,7 @@
             }
             .icon-full {
               display: block;
-              transform: scale(1);
+              animation: progress-bar 1000ms;
             }
           }
           .icon-empty {
@@ -69,11 +71,9 @@
             background: linear-gradient(to top, #ff79da, #9356dc);
             -webkit-background-clip: text;
             color: transparent;
-            transform-origin:50% 0%;
-            transition: transform 3000ms;
-            transform:scale(0)
+            transform-origin: bottom;
+          }
         }
-      }
       }
       .list_menu {
         display: grid;
@@ -84,8 +84,10 @@
           flex-direction: column;
         }
         @include for-tablet-up {
-          display: flex;
-          flex-direction: column;
+          display: grid;
+          grid-template-columns: repeat(3, 15rem);
+          gap: 10px;
+          margin-left: 10px;
         }
 
         .carte {
@@ -128,16 +130,21 @@
                 white-space: nowrap;
                 overflow: hidden;
                 text-overflow: ellipsis;
+
                 h5 {
                   font-weight: bold;
                   font-size: 1.1em;
                   padding: 10px 0 0px 10px;
                   margin: 0;
+                  overflow: hidden;
+                  text-overflow: ellipsis;
                 }
                 .carte--choix {
                   width: 100%;
                   display: flex;
                   justify-content: space-between;
+                  overflow: hidden;
+                  text-overflow: ellipsis;
 
                   .type {
                     font-weight: lighter;
@@ -179,6 +186,7 @@
 
         > a:hover {
           opacity: 0.7;
+          animation: ombre 3000ms;
         }
         a {
           text-decoration: none;

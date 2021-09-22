@@ -17,6 +17,15 @@
   }
 }
 
+@keyframes progress-bar{
+  0% {
+      transform: translateY(0);
+  }
+  100% {
+      transform: translateY(1);
+  }
+}
+
 /* animation apparition progressive des plats*/
 
 @keyframes slidein {
@@ -58,8 +67,8 @@
 
 /*modification couleur bouton commander*/
 
-@keyframes commander {
+@keyframes ombre {
   from {
-    box-shadow: 0 0 0 10px rgba(185, 2, 241, 0.158);
+    box-shadow: 10px 10px rgba(16, 2, 20, 0.158);
   }
 }
