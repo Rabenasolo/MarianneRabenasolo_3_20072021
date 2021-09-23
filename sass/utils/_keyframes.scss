@@ -17,6 +17,24 @@
   }
 }
 
+/* apparition du full container après le loading*/
+
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+
+  90% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/* appartition progressive du remplissage du coeur*/
+
 @keyframes progress-bar{
   0% {
       transform: translateY(0);
@@ -65,7 +83,7 @@
   }
 }
 
-/*modification couleur bouton commander*/
+/*modification ombre bouton commander*/
 
 @keyframes ombre {
   from {

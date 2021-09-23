@@ -50,30 +50,38 @@
         }
         .heart-icons__container {
           display: flex;
-          padding-left: 10px;
+          align-items: center;
           font-size: x-large;
           color: black;
-          &:hover {
-            cursor: pointer;
-            .icon-empty {
-              display: none;
+          padding-left: 10px;
+              .icon-empty {
+                position: absolute;
+                z-index: 2;
+
+                &:hover {
+              cursor: pointer;
+              animation: progress-bar 2s linear;
+
+              & + i {
+                opacity: 1;
+                transform: scale(1);
+                transition: transform 1s linear; }
+         
+              }
             }
+           
             .icon-full {
-              display: block;
-              animation: progress-bar 1000ms;
+              position: absolute;
+              opacity: 0;
+              background: linear-gradient(to top, $couleur-primaire, $couleur-secondaire);
+              -webkit-background-clip: text;
+              color: transparent;
+              transform-origin: bottom;
+              transform:scale(0);
+             
+            
             }
           }
-          .icon-empty {
-            display: block;
-          }
-          .icon-full {
-            display: none;
-            background: linear-gradient(to top, #ff79da, #9356dc);
-            -webkit-background-clip: text;
-            color: transparent;
-            transform-origin: bottom;
-          }
-        }
       }
       .list_menu {
         display: grid;
