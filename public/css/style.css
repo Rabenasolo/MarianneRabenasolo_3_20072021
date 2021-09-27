@@ -486,6 +486,11 @@ footer ul li a .icon {
     padding: 20px;
   }
 }
+@media (min-width: 600px) and (max-width: 1199px) {
+  .restaurant__container {
+    padding: 20px;
+  }
+}
 .restaurant__container .restaurant__title {
   text-align: center;
 }

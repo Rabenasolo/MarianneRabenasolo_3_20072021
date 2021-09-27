@@ -93,6 +93,9 @@
     padding: 20px;
   }
 
+  @include for-tablet-up {
+    padding: 20px;
+  }
   .restaurant__title {
     text-align: center;
   }
