@@ -483,7 +483,7 @@ footer ul li a .icon {
 }
 @media (max-width: 599px) {
   .restaurant__container {
-    padding: 0px;
+    padding: 20px;
   }
 }
 .restaurant__container .restaurant__title {
