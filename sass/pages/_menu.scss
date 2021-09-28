@@ -42,7 +42,7 @@
       }
       .title_menu_restaurants {
         display: flex;
-        justify-content: center;
+        justify-content: space-around;
         align-items: center;
 
         h1 {
@@ -53,7 +53,7 @@
           align-items: center;
           font-size: x-large;
           color: black;
-          padding-left: 10px;
+          padding-right: 20px;
               .icon-empty {
                 position: absolute;
                 z-index: 2;
@@ -93,14 +93,18 @@
         }
         @include for-tablet-up {
           display: grid;
-          grid-template-columns: repeat(3, 15rem);
+          grid-template-columns: 33% 33% 33%;
           gap: 10px;
           margin-left: 10px;
+          
+          @include for-desktop-up{
+            display: none;
+          }
         }
 
         .carte {
           margin: 20px 0;
-          animation: 1s linear 1s slidein;
+          animation:linear 1s slidein;
 
           h4 {
             font-weight: lighter;

@@ -29,9 +29,9 @@
       padding: 20px;
       margin: 0;
       cursor: grab;
-      box-shadow: 8px 8px 8px rgb(0 0 0 / 50%);
+      box-shadow:4px 4px 4px rgba(119, 38, 141, 0.158);
       border-radius: 20px;
-      background-color: #f1f1f3;
+      background-color: #f3f1f3;
       font-weight: bold;
       &:hover {
         opacity: 0.7;
@@ -185,6 +185,7 @@
             align-items: center;
             font-size: x-large;
             color: black;
+            
 
             .icon-empty {
               position: absolute;

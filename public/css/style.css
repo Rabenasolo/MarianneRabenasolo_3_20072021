@@ -72,7 +72,7 @@
 /*modification ombre bouton commander*/
 @keyframes ombre {
   from {
-    box-shadow: 10px 10px rgba(16, 2, 20, 0.158);
+    box-shadow: 10px 10px rgba(180, 74, 209, 0.158);
   }
 }
 /*body*/
@@ -129,7 +129,7 @@ a {
 }
 .menu__body .carte_menu .title-menu .title_menu_restaurants {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
 }
 .menu__body .carte_menu .title-menu .title_menu_restaurants h1 {
@@ -140,7 +140,7 @@ a {
   align-items: center;
   font-size: x-large;
   color: black;
-  padding-left: 10px;
+  padding-right: 20px;
 }
 .menu__body .carte_menu .title-menu .title_menu_restaurants .heart-icons__container .icon-empty {
   position: absolute;
@@ -177,14 +177,19 @@ a {
 @media (min-width: 600px) and (max-width: 1199px) {
   .menu__body .carte_menu .title-menu .list_menu {
     display: grid;
-    grid-template-columns: repeat(3, 15rem);
+    grid-template-columns: 33% 33% 33%;
     gap: 10px;
     margin-left: 10px;
   }
 }
+@media (min-width: 600px) and (max-width: 1199px) and (min-width: 1200px) {
+  .menu__body .carte_menu .title-menu .list_menu {
+    display: none;
+  }
+}
 .menu__body .carte_menu .title-menu .list_menu .carte {
   margin: 20px 0;
-  animation: 1s linear 1s slidein;
+  animation: linear 1s slidein;
 }
 .menu__body .carte_menu .title-menu .list_menu .carte h4 {
   font-weight: lighter;
@@ -327,22 +332,23 @@ a {
 .explore .location {
   display: flex;
   justify-content: center;
+  flex: 1;
   align-items: center;
   background-color: #e6e6f0;
   box-shadow: inset 0px 3px 5px rgba(0, 0, 0, 0.19);
 }
 .explore .location .location__icon {
   font-size: larger;
-  padding-left: 100px;
 }
 .explore .location .location__map {
-  background-color: #e6e6f0;
+  box-shadow: inset 0px 3px 5px rgba(0, 0, 0, 0.19);
+  width: 150px;
   border: none;
-  margin: 10px 0 10px 0;
+  background-color: #e6e6f0;
+  font-size: 1rem;
+  padding: 15px 0px 15px 0px;
+  text-align: center;
   font-weight: bold;
-  color: black;
-  font-size: larger;
-  padding-left: 20px;
 }
 .explore .explore__button {
   margin: 10px 0;
@@ -428,9 +434,9 @@ footer ul li a .icon {
   padding: 20px;
   margin: 0;
   cursor: grab;
-  box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.5);
+  box-shadow: 4px 4px 4px rgba(119, 38, 141, 0.158);
   border-radius: 20px;
-  background-color: #f1f1f3;
+  background-color: #f3f1f3;
   font-weight: bold;
 }
 .function .function__box .function__box__element:hover {

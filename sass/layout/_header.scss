@@ -44,7 +44,8 @@
 
   .location {
     display: flex;
-    justify-content:center;
+    justify-content: center;
+    flex: 1;
     align-items: center;
     background-color: #e6e6f0;
     box-shadow: inset 0px 3px 5px rgb(0 0 0 / 19%);
@@ -52,18 +53,19 @@
 
     .location__icon {
       font-size: larger;
-      padding-left: 100px
+    
       
     }
 
     .location__map {
-      background-color: #e6e6f0;
-      border: none;
-      margin: 10px 0 10px 0;
-      font-weight: bold;
-      color: black;
-      font-size: larger;
-      padding-left: 20px;
+      box-shadow: inset 0px 3px 5px rgb(0 0 0 / 19%);
+      width: 150px;
+    border: none;
+    background-color: #e6e6f0;
+    font-size: 1rem;
+    padding: 15px 0px 15px 0px;
+    text-align: center;
+    font-weight: bold;
    
     }
   }
