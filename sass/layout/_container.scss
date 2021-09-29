@@ -29,21 +29,18 @@
       padding: 20px;
       margin: 0;
       cursor: grab;
-      box-shadow:4px 4px 4px rgba(119, 38, 141, 0.158);
+      box-shadow:0 6px 10px #0000004b;;
       border-radius: 20px;
-      background-color: #f3f1f3;
+      background-color: #fff;;
       font-weight: bold;
       &:hover {
-        opacity: 0.7;
-        animation: ombre 3000ms;
+        background-color: #ece1f9;
+        transition-delay: 250ms;
         .function__box__element--icon {
-          color: #934ce9;
+          color: #9356DC;
         }
-      }
-      &:active {
-        .function__box__element--icon {
-          color: #934ce9;
-        }
+      
+     
       }
 
       .function__box__element--number {
@@ -86,23 +83,20 @@
 /*RESTAURANTS*/
 
 .restaurant__container {
-  background-color: #ebebf7;
+  background-color: #f1f1f3;
   padding: 20px;
-
-  @include for-phone-only {
-    padding: 20px;
-  }
-
-  @include for-tablet-up {
-    padding: 20px;
-  }
+  
   .restaurant__title {
     text-align: center;
   }
   .restaurant__list {
     display: flex;
-    gap: 30px;
-    padding-left: 20px;
+    justify-content: space-between;
+    align-items: center;
+   gap: 10px;
+    padding-left: 10px;
+    height: 100%;
+    
 
     @include for-phone-only {
       display: flex;

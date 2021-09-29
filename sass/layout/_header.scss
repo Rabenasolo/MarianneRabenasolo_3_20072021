@@ -45,29 +45,32 @@
   .location {
     display: flex;
     justify-content: center;
-    flex: 1;
-    align-items: center;
-    background-color: #e6e6f0;
+    align-items:center;
     box-shadow: inset 0px 3px 5px rgb(0 0 0 / 19%);
-   
+    background-color: #eaeaea;
 
     .location__icon {
-      font-size: larger;
-    
-      
+      font-size:larger;  
+      color: #27272a;
+      padding: 0 10px;
+
     }
 
     .location__map {
-      box-shadow: inset 0px 3px 5px rgb(0 0 0 / 19%);
-      width: 150px;
-    border: none;
-    background-color: #e6e6f0;
-    font-size: 1rem;
-    padding: 15px 0px 15px 0px;
-    text-align: center;
-    font-weight: bold;
-   
+      background-color: transparent;
+      border: 0;
+      padding: 15px 0;
+      text-align: center;
+      width: 10%;
+      color: #27272a;
+      font-weight: bold;
+
+      @include for-phone-only { width: 35%;
+      }
+      @include for-tablet-up {width: 15%;
+      }
     }
+    
   }
 /* bouton explorer nos restaurants*/
 
