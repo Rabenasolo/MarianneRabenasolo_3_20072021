@@ -30,10 +30,12 @@
 /* appartition progressive du remplissage du coeur*/
 @keyframes progress-bar {
   0% {
-    transform: translateY(0);
+    opacity: 0;
+    transform: translateY(15%);
   }
   100% {
-    transform: translateY(1);
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 /* animation apparition progressive des plats*/
